@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<head>
+<title>Registration page</title>
+</head>
+<body>
+    <script>
+        function validate() {
+            var fname = document.reg_form.fname;
+            var lname = document.reg_form.lname;
+            var address = document.reg_form.address;
+            var dd=document.reg_form.dd;
+            var age=document.reg_form.age;
+            var gender = document.reg_form.gender;
+            var email = document.reg_form.email;
+            var mobile = document.reg_form.mobile;
+            var course = document.reg_form.course;
+            if (fname.value.length <= 0) {
+                alert("Name is required");
+                fname.focus();
+                return false;
+            }
+            if (lname.value.length <= 0) {
+                alert("Last Name is required");
+                lname.focus();
+                return false;
+            }
+            if (address.value.length <= 0) {
+                alert("Address is required");
+                address.focus();
+                return false;
+            }
+            if (dd.value.length <= 0) {
+                alert("Date  is required");
+                dd.focus();
+                return false;
+            }
+            if (age.value.length <= 0) {
+                alert("Age is required");
+                mobile.focus();
+                return false;
+            }
+            if (gender.value.length <= 0) {
+                alert("Gender is required");
+                gender.focus();
+                return false;
+            }
+            if (email.value.length <= 0) {
+                alert("Email Id is required");
+                email.focus();
+                return false;
+            }
+            if (mobile.value.length <= 0) {
+                alert("Mobile number is required");
+                mobile.focus();
+                return false;
+            }
+            if (course.value == "select course") {
+                alert("Course is required");
+                course.focus();
+                return false;
+            }
+            return false;
+        }
+    </script>
+<style>
+body {
+    border:0.1cm solid rgb(2, 2, 2);
+    border-color:black;
+    height: 640px; width:1270px;
+    background-color:rgb(164, 217, 248);}
+</style>
+<form action=""name="reg_form">
+<center><h1><b> Fill The Registration Form</b></h1></center>
+<h3 style = " background-color: rgb(23, 181, 202);"><Center>Registration Form</Center></h3>
+<form method="post">
+<fieldset>
+<body>
+    <label>First name:</label>
+    <input type="text" name="fname" placeholder="Enter your first name" name="fname"size="30"><br><br>
+    <label>Last name:</label>
+    <input type="text" name="lname" placeholder="Enter your last name" name="lname"size="30"><br><br>
+    <label>Address:</label>
+    <textarea name="" id="" cols="30" rows="5"name="address"></textarea><br><br>
+    <label>Date of birth:</label>
+    <input type="date" name="dd"> <br><br>
+    <label>Age:</label>
+    <input type="number" name="age" placeholder="Enter your current age"><br><br>
+    <label>Gender:</label>
+    <input type="radio"  id=""name="gender">Male
+    <input type="radio"  id=""name="gender">Female
+<br><br>
+    <label>Email:</label>
+    <input type="email" name="email" placeholder="Enter your email-id"name="email"><br><br>
+    <label>Contact no. :</label>
+    <input type="number" name="mobile" placeholder="Enter your phone no."> <br><br>
+    <label>Select course</label><select name="course" id="">
+        <option value="">choice</option>
+        <option value="">B tech</option>
+        <option value="">M tech</option>
+        <option value="">BSC</option>
+        <option alue="">BCA</option>
+    </select><br><br>
+    <button onclick="validate()">Submit</button><button>Reset</button>
+</select><br><br>
+</fieldset>
+</form>
+<h3><center>THANK YOU</center></h3>
+</body>
+</html>
